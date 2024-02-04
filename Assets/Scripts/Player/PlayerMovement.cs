@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private float moveSpeed;
-    private float horizontal, vertical;
-    private Vector3 playerInput;
+    [SerializeField] private float _moveSpeed;
+    private float _horizontal, _vertical;
+    private Vector3 _playerInput;
 
     [Header("References")]
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D _rb;
 
 
     private void FixedUpdate()
@@ -21,13 +21,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetInputs()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical"); 
-        playerInput = new Vector3(horizontal, vertical, 0);
+        _horizontal = Input.GetAxisRaw("Horizontal");
+        _vertical = Input.GetAxisRaw("Vertical"); 
+        _playerInput = new Vector3(_horizontal, _vertical, 0);
     }
 
     private void MovePlayer()
     {
-        rb.MovePosition(transform.position + moveSpeed * Time.deltaTime * playerInput);
+        _rb.MovePosition(transform.position + _moveSpeed * Time.deltaTime * _playerInput);
     }
 }
