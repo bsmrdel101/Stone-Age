@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e1716c1eb0427748a98a486e477ac07, type: 3}
-  m_Name: Stone Spear
+  m_Name: Fists
   m_EditorClassIdentifier: 
-  Name: Stone Spear
+  Name: Fists
   Sprite: {fileID: 0}
-  ItemType: 2
-  Tier: 1
-  Damage: 3
-  AttackDelay: 1
+  ItemType: 1
+  Tier: 0
+  Damage: 0
+  AttackDelay: 0

@@ -4,31 +4,42 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     [Header("Actions")]
     public static Action<Item, int> AddItemAction;
     public static Action<string, int> RemoveItemAction;
+    public static Action<Item> EquipWeaponAction;
+    public static Action<Item> EquipToolAction;
 
     [Header("Inventory")]
     public List<InventoryItem> Inventory = new List<InventoryItem>();
+    public Item selectedWeapon;
+    public Item selectedTool;
 
     [Header("References")]
     [SerializeField] private TMP_Text _woodAmountText;
     [SerializeField] private TMP_Text _rockAmountText;
+    [SerializeField] private Image _selectedWeaponSprite;
+    [SerializeField] private Image _selectedToolSprite;
 
     
     private void OnEnable()
     {
         AddItemAction += AddItem;
         RemoveItemAction += RemoveItem;
+        EquipWeaponAction += EquipWeapon;
+        EquipToolAction += EquipTool;
     }
 
     private void OnDisable()
     {
         AddItemAction -= AddItem;
         RemoveItemAction -= RemoveItem;
+        EquipWeaponAction -= EquipWeapon;
+        EquipToolAction -= EquipTool;
     }
 
 
@@ -76,6 +87,18 @@ public class InventoryManager : MonoBehaviour
             if (inventoryItem.Item.Name == "Log") _woodAmountText.text = inventoryItem.Quantity.ToString();
             if (inventoryItem.Item.Name == "Rock") _rockAmountText.text = inventoryItem.Quantity.ToString();
         }
+    }
+
+    private void EquipWeapon(Item item)
+    {
+        selectedWeapon = item;
+        _selectedWeaponSprite.sprite = item.Sprite;
+    }
+
+    private void EquipTool(Item item)
+    {
+        selectedTool = item;
+        _selectedToolSprite.sprite = item.Sprite;
     }
 }
 
