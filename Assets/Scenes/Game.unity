@@ -685,6 +685,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: e18b152b7e455df42a7de747fa275e0c, type: 2}
   ResourcePool: 10
   Tier: 1
+  cursor: {fileID: 2800000, guid: 3732fc1a88754a4458850b7049708387, type: 3}
 --- !u!1 &878945436
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +819,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 57b61cbf865378044acd2e5ad21aede4, type: 2}
   ResourcePool: 15
   Tier: 1
+  cursor: {fileID: 2800000, guid: 3732fc1a88754a4458850b7049708387, type: 3}
 --- !u!61 &911944014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1238,6 +1240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1674250521}
+  - component: {fileID: 1674250522}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1260,6 +1263,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1109217796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674250522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674250520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5092db578c56b140a3827fc32ee8b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1731030118
 GameObject:
   m_ObjectHideFlags: 0

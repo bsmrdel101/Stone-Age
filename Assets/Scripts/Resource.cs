@@ -17,10 +17,27 @@ public class Resource : MonoBehaviour
     public int ResourcePool;
     public int Tier = 1;
 
+    [Header("References")]
+    [SerializeField] private Texture2D cursor;
+
 
     public void DepleteResourcePool(int amount)
     {
         ResourcePool -= amount;
-        if (ResourcePool <= 0) Destroy(this.gameObject);
+        if (ResourcePool <= 0)
+        {
+            Destroy(gameObject);
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
+    }
+
+    public void OnMouseEnter()
+    {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+    }
+    
+    public void OnMouseExit()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }
