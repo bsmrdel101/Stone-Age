@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -12,6 +13,10 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Inventory")]
     public List<InventoryItem> Inventory = new List<InventoryItem>();
+
+    [Header("References")]
+    [SerializeField] private TMP_Text _woodAmountText;
+    [SerializeField] private TMP_Text _rockAmountText;
 
     
     private void OnEnable()
@@ -37,6 +42,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem newItem = new InventoryItem(item, quantity);
             Inventory.Add(newItem);
         }
+        UpdateResourceCounterUI();
     }
 
     private void RemoveItem(string itemName, int quantity)
@@ -60,6 +66,15 @@ public class InventoryManager : MonoBehaviour
                 Inventory[i] = itemCopy;
                 break;
             }
+        }
+    }
+
+    private void UpdateResourceCounterUI()
+    {
+        foreach (InventoryItem inventoryItem in Inventory)
+        {
+            if (inventoryItem.Item.Name == "Log") _woodAmountText.text = inventoryItem.Quantity.ToString();
+            if (inventoryItem.Item.Name == "Rock") _rockAmountText.text = inventoryItem.Quantity.ToString();
         }
     }
 }
