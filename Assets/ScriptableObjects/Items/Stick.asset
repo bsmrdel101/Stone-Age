@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e1716c1eb0427748a98a486e477ac07, type: 3}
-  m_Name: Log
+  m_Name: Stick
   m_EditorClassIdentifier: 
-  Name: Log
+  Name: Stick
   Sprite: {fileID: 0}
+  ItemType: 0
   Tier: 1
   Damage: 0
   AttackDelay: 0

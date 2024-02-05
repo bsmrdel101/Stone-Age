@@ -16,7 +16,11 @@ public class Item : ScriptableObject
     public string Name;
     public Sprite Sprite;
     public ItemType ItemType;
+
+    [Header("Tool")]
     public int Tier = 1;
+
+    [Header("Weapon")]
     public int Damage;
     public float AttackDelay;
 }

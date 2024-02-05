@@ -10,9 +10,9 @@ public class InventoryManager : MonoBehaviour
 {
     [Header("Actions")]
     public static Action<Item, int> AddItemAction;
-    public static Action<string, int> RemoveItemAction;
     public static Action<Item> EquipWeaponAction;
     public static Action<Item> EquipToolAction;
+    public static Action<List<InventoryItem>> UpdateInventoryAction;
 
     [Header("Inventory")]
     public List<InventoryItem> Inventory = new List<InventoryItem>();
@@ -22,6 +22,8 @@ public class InventoryManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private TMP_Text _woodAmountText;
     [SerializeField] private TMP_Text _rockAmountText;
+    [SerializeField] private TMP_Text _ropeAmountText;
+    [SerializeField] private TMP_Text _grassAmountText;
     [SerializeField] private Image _selectedWeaponSprite;
     [SerializeField] private Image _selectedToolSprite;
 
@@ -29,17 +31,17 @@ public class InventoryManager : MonoBehaviour
     private void OnEnable()
     {
         AddItemAction += AddItem;
-        RemoveItemAction += RemoveItem;
         EquipWeaponAction += EquipWeapon;
         EquipToolAction += EquipTool;
+        UpdateInventoryAction += UpdateInventory;
     }
 
     private void OnDisable()
     {
         AddItemAction -= AddItem;
-        RemoveItemAction -= RemoveItem;
         EquipWeaponAction -= EquipWeapon;
         EquipToolAction -= EquipTool;
+        UpdateInventoryAction -= UpdateInventory;
     }
 
 
@@ -54,11 +56,12 @@ public class InventoryManager : MonoBehaviour
             Inventory.Add(newItem);
         }
         UpdateResourceCounterUI();
+        CraftingManager.ReloadCraftingRecipeAction();
     }
 
-    private void RemoveItem(string itemName, int quantity)
+    private void UpdateInventory(List<InventoryItem> inventory)
     {
-        
+        Inventory = inventory;
     }
 
     private bool ItemExists(string itemName)
@@ -84,8 +87,10 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (InventoryItem inventoryItem in Inventory)
         {
-            if (inventoryItem.Item.Name == "Log") _woodAmountText.text = inventoryItem.Quantity.ToString();
+            if (inventoryItem.Item.Name == "Stick") _woodAmountText.text = inventoryItem.Quantity.ToString();
             if (inventoryItem.Item.Name == "Rock") _rockAmountText.text = inventoryItem.Quantity.ToString();
+            if (inventoryItem.Item.Name == "Rope") _ropeAmountText.text = inventoryItem.Quantity.ToString();
+            if (inventoryItem.Item.Name == "Grass") _grassAmountText.text = inventoryItem.Quantity.ToString();
         }
     }
 
@@ -99,6 +104,11 @@ public class InventoryManager : MonoBehaviour
     {
         selectedTool = item;
         _selectedToolSprite.sprite = item.Sprite;
+    }
+
+    public int GetItemQty(InventoryItem item)
+    {
+        return Inventory.Find((inventoryItem) => inventoryItem.Item.Name == item.Item.Name).Quantity;
     }
 }
 

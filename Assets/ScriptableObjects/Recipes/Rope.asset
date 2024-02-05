@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1716c1eb0427748a98a486e477ac07, type: 3}
+  m_Script: {fileID: 11500000, guid: f79ae3c6acd97d24891767aad9d6f4d0, type: 3}
   m_Name: Rope
   m_EditorClassIdentifier: 
   Name: Rope
-  Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  ItemType: 0
-  Tier: 1
-  Damage: 0
-  AttackDelay: 0
+  Ingredients:
+  - Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
+    Quantity: 3
+  CraftedItem: {fileID: 11400000, guid: b5683dbc48fe92e41a368daecc21b3b6, type: 2}
+  Quantity: 1
