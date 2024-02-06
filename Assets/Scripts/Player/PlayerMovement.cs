@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private float _horizontal, _vertical;
     private Vector3 _playerInput;
 
+    [Header("Animation")]
+    [SerializeField] private Animator _anim;
+
     [Header("References")]
     [SerializeField] private Rigidbody2D _rb;
 
@@ -29,5 +32,24 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rb.MovePosition(transform.position + _moveSpeed * Time.deltaTime * _playerInput);
+        
+        if (_horizontal != 0 || _vertical != 0)
+            _anim.SetBool("IsWalking", true);
+        else
+            _anim.SetBool("IsWalking", false);
+
+        HandleFlipPlayer();
+    }
+
+    private void HandleFlipPlayer()
+    {
+        if (_horizontal < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }

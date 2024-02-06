@@ -5368,10 +5368,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5710040553848193904, guid: 8fd70b73a24d85b4f8825da55605658b, type: 3}
-      propertyPath: _craftingUI
-      value: 
-      objectReference: {fileID: 706444161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
