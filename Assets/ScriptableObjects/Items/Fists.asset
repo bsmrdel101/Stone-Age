@@ -16,5 +16,5 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   ItemType: 1
   Tier: 0
-  Damage: 0
+  Damage: 1
   AttackDelay: 0

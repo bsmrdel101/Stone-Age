@@ -23,15 +23,36 @@ public class PlayerResourceHarvesting : MonoBehaviour
         if (!IsValidResource(hit)) return;
 
         Resource resource = hit.collider.GetComponent<Resource>();
-        if (resource.ResourcePool > 0 && _inventory.selectedTool.Tier >= resource.Tier)
+        if (_inventory.selectedTool.Tier >= resource.Tier)
         {
-            InventoryManager.AddItemAction(resource.Item, 1);
-            resource.DepleteResourcePool(1);
+            StartCoroutine(DamageResource(resource));
         }
     }
 
     private bool IsValidResource(RaycastHit2D hit)
     {
         return hit.collider && hit.collider.GetComponent<Resource>();
+    }
+
+    private IEnumerator DamageResource(Resource resource)
+    {
+        resource.ResourceBreakParticles.Play();
+        Collider2D col = resource.GetComponent<Collider2D>();
+        bool isResourceDepleted = resource.CurrentDmgLevel >= resource.DmgThreshold;
+        col.enabled = false;
+        Cursor.visible = false;
+        yield return new WaitForSeconds(_inventory.selectedTool.AttackDelay);
+        col.enabled = true;
+        Cursor.visible = true;
+
+        if (isResourceDepleted)
+        {
+            InventoryManager.AddItemAction(resource.Item, resource.ResourcePool);
+            resource.DepleteResourcePool();
+            resource.CurrentDmgLevel = 0;
+        } else
+        {
+            resource.CurrentDmgLevel += _inventory.selectedTool.Damage;
+        }
     }
 }
