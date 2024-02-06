@@ -17,4 +17,4 @@ MonoBehaviour:
   ItemType: 1
   Tier: 1
   Damage: 2
-  AttackDelay: 0
+  AttackDelay: 0.1

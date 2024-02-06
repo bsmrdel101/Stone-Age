@@ -904,7 +904,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
   ResourcePool: 1
   Tier: 0
-  DmgThreshold: 0
+  DmgThreshold: 2
   CurrentDmgLevel: 0
   ResourceBreakParticles: {fileID: 1206809520}
   cursor: {fileID: 2800000, guid: fbfebcd9edf81364ba5d3ebe1a92a6bb, type: 3}
@@ -1019,19 +1019,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9598771
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.509694
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1043,15 +1043,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
   ResourcePool: 1
   Tier: 0
-  DmgThreshold: 0
+  DmgThreshold: 2
   CurrentDmgLevel: 0
   ResourceBreakParticles: {fileID: 934383314}
   cursor: {fileID: 2800000, guid: fbfebcd9edf81364ba5d3ebe1a92a6bb, type: 3}
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
   ResourcePool: 1
   Tier: 0
-  DmgThreshold: 0
+  DmgThreshold: 2
   CurrentDmgLevel: 0
   ResourceBreakParticles: {fileID: 1016705445}
   cursor: {fileID: 2800000, guid: fbfebcd9edf81364ba5d3ebe1a92a6bb, type: 3}
@@ -2357,19 +2357,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9598771
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.549817
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2381,15 +2381,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943747293473881660, guid: e6919a40da9ef714a8d649af31cf6792, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4019,7 +4019,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
   ResourcePool: 1
   Tier: 0
-  DmgThreshold: 0
+  DmgThreshold: 2
   CurrentDmgLevel: 0
   ResourceBreakParticles: {fileID: 512611395}
   cursor: {fileID: 2800000, guid: fbfebcd9edf81364ba5d3ebe1a92a6bb, type: 3}
@@ -4477,7 +4477,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
   ResourcePool: 1
   Tier: 0
-  DmgThreshold: 0
+  DmgThreshold: 2
   CurrentDmgLevel: 0
   ResourceBreakParticles: {fileID: 272459319}
   cursor: {fileID: 2800000, guid: fbfebcd9edf81364ba5d3ebe1a92a6bb, type: 3}
@@ -4896,7 +4896,7 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: 058433d6087e97148908a7118dd0dea0, type: 2}
   ResourcePool: 1
   Tier: 0
-  DmgThreshold: 0
+  DmgThreshold: 2
   CurrentDmgLevel: 0
   ResourceBreakParticles: {fileID: 1836521637}
   cursor: {fileID: 2800000, guid: fbfebcd9edf81364ba5d3ebe1a92a6bb, type: 3}
